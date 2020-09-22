@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {UserService} from './services/user.service';
+import {User} from "./models/User";
 
 
 @Component({
@@ -10,11 +11,9 @@ import {UserService} from './services/user.service';
 })
 export class AppComponent {
   title = 'JsonPlaceholderLesson01';
-  users: any[];
+  outComingUsers: User[];
 
-  constructor(private userService: UserService) {
-    this.userService.getAllUsers().subscribe(value =>
-      this.users = value
-    );
-  }
+ constructor() {
+ }
+
 }

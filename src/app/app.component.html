@@ -1,10 +1,14 @@
-<div *ngFor="let user of users">
+<ul>
+  <li><a routerLink="users">All Users</a></li>
+  <li><a routerLink="posts">All Posts</a></li>
+  <li><a routerLink="comment">All Comment</a></li>
+</ul>
 
-  {{user.id}} --
-  {{user.name}} --
-<!--  {{user.a}}-->
-  {{user.email}} --
-  {{user.phone}} --
-  <hr>
+<router-outlet></router-outlet>
 
-</div>
+
+<!---->
+<!--<app-all-users [users]="outComingUsers"></app-all-users>-->
+
+<!---->
+
